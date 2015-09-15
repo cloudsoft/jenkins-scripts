@@ -13,7 +13,7 @@ APT_GET=$(which apt-get)
 
 # Add geolocation db
 mkdir -p ~/.brooklyn
-cp ~/brooklyn-setup/* ~/.brooklyn
+cp ~/*.* ~/.brooklyn
 if [ ! -z $YUM ]; then
         sudo chown -R ec2-user:ec2-user ~/.brooklyn/
 elif [ ! -z $APT_GET ]; then
