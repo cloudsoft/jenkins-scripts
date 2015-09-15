@@ -11,9 +11,9 @@
 YUM=$(which yum)
 APT_GET=$(which apt-get)
 
-# Add geolocation db
+# Copy files sent through Jenkins into ~/.brooklyn folder
 mkdir -p ~/.brooklyn
-cp ~/*.* ~/.brooklyn
+cp /var/tmp/*.* ~/.brooklyn/
 if [ ! -z $YUM ]; then
         sudo chown -R ec2-user:ec2-user ~/.brooklyn/
 elif [ ! -z $APT_GET ]; then
