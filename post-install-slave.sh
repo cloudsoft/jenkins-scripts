@@ -10,5 +10,5 @@
 
 # Copy files sent through Jenkins into ~/.brooklyn folder
 mkdir -p ~/.brooklyn
-cp $JENKINS_ROOT/*.* ~/.brooklyn/
+cp /mnt/jenkins/*.* ~/.brooklyn/
 chmod 600 ~/.brooklyn/brooklyn.properties
