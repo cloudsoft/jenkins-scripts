@@ -8,7 +8,13 @@
 ##
 #set -x # DEBUG
 
-# Copy files sent through Jenkins into ~/.brooklyn folder
+# Move Brooklyn files sent through Jenkins into ~/.brooklyn folder
 mkdir -p ~/.brooklyn
-cp /mnt/jenkins/*.* ~/.brooklyn/
+mv /mnt/jenkins/brooklyn.properties ~/.brooklyn/
+mv /mnt/jenkins/GeoLite2-City.mmdb ~/.brooklyn/
 chmod 600 ~/.brooklyn/brooklyn.properties
+chmod a+r ~/.brooklyn/GeoLite2-City.mmdb
+
+# Move Maven files sent through Jenkins into ~/.m2 folder
+mkdir -p ~/.m2
+mv /mnt/jenkins/settings.xml ~/.m2/
